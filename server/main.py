@@ -1,6 +1,7 @@
 import os
 import sys
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 import requests
 from dotenv import load_dotenv
 
@@ -13,13 +14,13 @@ except KeyError:
     print("Please set the OPENWEATHER_API_KEY and CITY environment variables")
     sys.exit(1)
 
-app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "Welcome to ShitWeatherApp"}
+app = FastAPI(title="Shit Weather App", version="0.1.0")
+api_app = FastAPI(title="Shit Weather API", version="0.1.0")
+app.mount("/api", api_app)
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
-@app.get("/weather")
+@api_app.get("/weather")
 async def weather():
     # Get weather data from OpenWeather API
     url = f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={OPENWEATHER_API_KEY}&units=imperial"

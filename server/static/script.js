@@ -10,7 +10,7 @@ button.addEventListener("click", getCurrentWeather);
 function getCurrentWeather() {
 
   
-  const path = "/weather"
+  const path = "/api/weather"
   
   const apiUrl = baseUrl + path
   

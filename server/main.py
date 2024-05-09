@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 try:
     OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+    CITY = os.getenv("CITY")
 except KeyError:
-    print("Please set the OPENWEATHER_API_KEY environment variable")
+    print("Please set the OPENWEATHER_API_KEY and CITY environment variables")
     sys.exit(1)
-CITY = "College Station"
 
 app = FastAPI()
 

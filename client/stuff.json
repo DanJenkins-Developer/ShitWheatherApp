@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -96.3344,
+        "lat": 30.628
+    },
+    "weather": [
+        {
+            "id": 721,
+            "main": "Haze",
+            "description": "haze",
+            "icon": "50n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 79.95,
+        "feels_like": 79.95,
+        "temp_min": 78.6,
+        "temp_max": 80.62,
+        "pressure": 1004,
+        "humidity": 83
+    },
+    "visibility": 9656,
+    "wind": {
+        "speed": 8.05,
+        "deg": 180
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1715225010,
+    "sys": {
+        "type": 2,
+        "id": 2082309,
+        "country": "US",
+        "sunrise": 1715168114,
+        "sunset": 1715216903
+    },
+    "timezone": -18000,
+    "id": 4682464,
+    "name": "College Station",
+    "cod": 200
+}
